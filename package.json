@@ -1,0 +1,26 @@
+{
+  "name": "catalog_manager",
+  "description": "A Card-Catalog plugin for managing categories",
+  "version": "0.0.1",
+  "private": true,
+  "url": "",
+  "keywords": ["plugins"],
+  "dependencies": {
+   
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "scripts": {
+    "test": "mocha test/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "./lib/index.js",
+  "engines": {
+    "node": ">=0.6.x"
+  }
+}
