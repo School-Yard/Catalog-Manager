@@ -6,7 +6,7 @@
   "url": "",
   "keywords": ["plugins"],
   "dependencies": {
-   
+
   },
   "devDependencies": {
     "mocha": "*",
@@ -19,7 +19,7 @@
     "type": "git",
     "url": ""
   },
-  "main": "./lib/index.js",
+  "main": "./lib/catalog-manager/index.js",
   "engines": {
     "node": ">=0.6.x"
   }
