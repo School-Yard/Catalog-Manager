@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>New Category // Card Manager</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  
+  <h1>New Category</h1>
+
+  <form action="/{{=it.category}}/{{=it.card}}/categories" method="post">
+
+    <div class="field">
+      <label>Name:</label><br/>
+      <input type="text" name="category[name]">
+    </div>
+
+    <div class="field">
+      <label>Slug:</label><br/>
+      <input type="text" name="category[slug]">
+    </div>
+
+    <div class="actions">
+      <input type="submit" value="Submit">
+    </div>
+
+  </form>
+
+  <a href="/{{=it.category}}/{{=it.card}}/categories">Back</a>
+
+</body>
+</html>

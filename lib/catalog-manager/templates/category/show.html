@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Category Index // Card Manager</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+  <h1>Category</h1>
+
+  <div class="field">
+    <label>Name:</label> {{=it.result.name}}
+  </div>
+
+  <div class="field">
+    <label>Slug:</label> {{=it.result.slug}}
+  </div>
+
+  <div class="field">
+    <label>Published:</label> {{=it.result.published}}
+  </div>
+
+  <a href="/{{=it.category}}/{{=it.card}}/categories">Back</a> |
+  <a href="/{{=it.category}}/{{=it.card}}/categories/{{=it.result.id}}/edit">Edit</a> |
+  <form action="/{{=it.category}}/{{=it.card}}/categories/{{=it.result.id}}" method="post">
+    <input type="hidden" name="_method" value="delete"/>
+    <button type="submit">Destroy</button>
+  </form>
+</body>
+</html>

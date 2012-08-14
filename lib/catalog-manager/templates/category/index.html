@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Category Index // Card Manager</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  
+  <h1>Categories</h1>
+
+  <h4><a href="/{{=it.category}}/{{=it.card}}/categories/new">New Category</a></h4>
+
+  <ul>
+  {{ for(var i in it.categories) { }}
+    <li><a href="/{{=it.category}}/{{=it.card}}/categories/{{=it.categories[i].id}}">{{=it.categories[i].name}}</a></li>
+  {{ } }}
+  </ul>
+
+</body>
+</html>
