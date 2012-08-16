@@ -25,8 +25,11 @@
     </div>
 
     <div class="field">
-      <label>Published:</label><br/>
-
+      <label>Published:</label>
+      <select name="category[published]">
+        <option value="true" {{ if(it.result.published === true) { }}selected{{ }; }}>True</option>
+        <option value="false" {{ if(it.result.published === false) { }}selected{{ }; }}>False</option>
+      </select>
     </div>
 
     <div class="actions">
