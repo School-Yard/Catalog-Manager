@@ -23,11 +23,41 @@
     <label>Published:</label> {{=it.result.published}}
   </div>
 
-  <a href="/{{=it.category}}/{{=it.card}}/categories">Back</a> |
-  <a href="/{{=it.category}}/{{=it.card}}/categories/{{=it.result.id}}/edit">Edit</a> |
-  <form action="/{{=it.category}}/{{=it.card}}/categories/{{=it.result.id}}" method="post">
+  <a href="/{{=it.category.slug}}/{{=it.card}}/categories">Back</a> |
+  <a href="/{{=it.category.slug}}/{{=it.card}}/categories/{{=it.result.id}}/edit">Edit</a> |
+  <form action="/{{=it.category.slug}}/{{=it.card}}/categories/{{=it.result.id}}" method="post">
     <input type="hidden" name="_method" value="delete"/>
     <button type="submit">Destroy</button>
   </form>
+
+  <hr/>
+
+  <h3>Active Cards</h3>
+
+  <ul>
+    {{ for(var i in it.active_cards) { }}
+    <li>{{=it.active_cards[i].name}} |
+      <form action="/{{=it.category.slug}}/{{=it.card}}/categories/{{=it.result.id}}/cards/{{=it.active_cards[i].slug}}" method="post">
+        <input type="hidden" name="_method" value="delete"/>
+        <button type="submit">Remove</button>
+      </form>
+    </li>
+    {{ } }}
+  </ul>
+
+  <hr/>
+
+  <h3>Available Cards</h3>
+
+  <ul>
+    {{ for(var i in it.available_cards) { }}
+    <li>{{=it.available_cards[i].name}} |
+      <form action="/{{=it.category.slug}}/{{=it.card}}/categories/{{=it.result.id}}/cards/{{=it.available_cards[i].slug}}" method="post">
+        <button type="submit">Add</button>
+      </form>
+    </li>
+    {{ } }}
+  </ul>
+
 </body>
 </html>
