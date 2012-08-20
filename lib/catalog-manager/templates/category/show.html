@@ -50,9 +50,9 @@
   <h3>Available Cards</h3>
 
   <ul>
-    {{ for(var i in it.collection) { }}
-    <li>{{=it.collection[i].name}} |
-      <form action="/{{=it.category.slug}}/{{=it.card}}/categories/{{=it.result.id}}/cards/{{=it.collection[i].slug}}" method="post">
+    {{ for(var i in it.available_cards) { }}
+    <li>{{=it.available_cards[i].name}} |
+      <form action="/{{=it.category.slug}}/{{=it.card}}/categories/{{=it.result.id}}/cards/{{=it.available_cards[i].slug}}" method="post">
         <button type="submit">Add</button>
       </form>
     </li>
