@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Edit Category // Card Manager</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  
+  <h1>Edit Card</h1>
+
+  <form action="/{{=it.active_category.slug}}/{{=it.active_card}}/categories/{{=it.category.id}}/cards/{{=it.card}}" method="post">
+    <input type="hidden" name="_method" value="put"/>
+
+    <div class="field">
+      <label>Name:</label> {{=it.result.name}}
+    </div>
+
+    <div class="field">
+      <label>Published:</label>
+      <select name="card[published]">
+        <option value="true" {{ if(it.result.attrs.published === true) { }}selected{{ }; }}>True</option>
+        <option value="false" {{ if(it.result.attrs.published === false) { }}selected{{ }; }}>False</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <input type="submit" value="Update">
+    </div>
+
+  </form>
+
+  <a href="/{{=it.active_category.slug}}/{{=it.active_card}}/categories/{{=it.category.id}}">Back</a>
+
+</body>
+</html>

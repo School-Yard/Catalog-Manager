@@ -37,6 +37,7 @@
   <ul>
     {{ for(var i in it.active_cards) { }}
     <li>{{=it.active_cards[i].name}} |
+      <a href="/{{=it.category.slug}}/{{=it.card}}/categories/{{=it.result.id}}/cards/{{=it.active_cards[i].slug}}/edit">Edit</a> |
       <form action="/{{=it.category.slug}}/{{=it.card}}/categories/{{=it.result.id}}/cards/{{=it.active_cards[i].slug}}" method="post">
         <input type="hidden" name="_method" value="delete"/>
         <button type="submit">Remove</button>
