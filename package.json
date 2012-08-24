@@ -2,9 +2,15 @@
   "name": "catalog_manager",
   "description": "A Card-Catalog plugin for managing categories",
   "version": "0.0.1",
+  "author": "Cody Stoltman <particlebanana@gmail.com>",
+  "maintainers" : [
+    "particlebanana <particlebanana@gmail.com>",
+    "vanetix <matmcfarland@gmail.com>"
+  ],
   "private": true,
-  "url": "",
+  "url": "https://github.com/School-Yard/Catalog-Manager",
   "keywords": ["plugins"],
+  "license" : "MIT",
   "dependencies": {
     "cardcatalog": "0.0.x",
     "consolidate": "0.4.x",
@@ -19,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:School-Yard/Catalog-Manager.git"
   },
   "main": "./lib/catalog-manager/index.js",
   "engines": {
