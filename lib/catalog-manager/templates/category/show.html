@@ -32,6 +32,21 @@
 
   <hr/>
 
+  <h3>Index Card</h3>
+  <ul>
+    {{ for(var i in it.active_cards) { }}
+    <li>{{=it.active_cards[i].name}} |
+      <form action="/{{=it.category.slug}}/{{=it.card}}/categories/{{=it.result.id}}" method="post">
+        <input type="hidden" name="_method" value="put"/>
+        <input type="hidden" name="category[index]" value="{{=it.active_cards[i].slug}}"/>
+        <button type="submit" {{ if(it.active_cards[i].slug === it.category.index) { }}disabled="disabled"{{ } }}>Select</button>
+      </form>
+    </li>
+    {{ } }}
+  </ul>
+
+  <hr/>
+
   <h3>Active Cards</h3>
 
   <ul>
